@@ -1,2 +1,0 @@
-# ychat
-Private messenger app 
