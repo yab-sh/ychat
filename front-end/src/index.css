@@ -87,13 +87,17 @@ p {
 }
 
 button {
+  font-family: 'Jaro';
   background-color: var(--accent);
   color: var(--text);
   padding: var(--spacing-s) var(--spacing-m);
   border-radius: var(--border-radius);
   border: none;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: -2px;
+  -webkit-text-stroke: 0.1px var(--bg-dark);
 }
 
 button:hover {

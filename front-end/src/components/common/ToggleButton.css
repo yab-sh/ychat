@@ -1,0 +1,19 @@
+.toggle-button {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: var(--bg-light);
+  border-radius: 50%;
+  transition: transform 0.2s;
+}

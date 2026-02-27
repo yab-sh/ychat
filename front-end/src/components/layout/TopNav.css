@@ -1,0 +1,29 @@
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-m);
+  background-color: var(--bg);
+  width: 100%;
+  border-radius: var(--border-radius)
+}
+
+.logo {
+  font-size: 2.75rem;
+  font-family: 'Jaro', sans-serif;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: -2px;
+}
+
+.topnav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-m);
+}
+
+.avatar-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
