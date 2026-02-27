@@ -3,6 +3,7 @@ import { CHAT_THEME } from "@/utils/constants"
 
 interface Settings {
   theme: typeof CHAT_THEME
+  mode: "dark" | "light"
 }
 
 interface SettingsContextType {
@@ -14,7 +15,8 @@ const SettingsContext = createContext<SettingsContextType | undefined>(undefined
 
 export function SettingsProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<Settings>({
-    theme: CHAT_THEME
+    theme: CHAT_THEME,
+    mode: "dark"
   })
 
   // Persist settings to localStorage
