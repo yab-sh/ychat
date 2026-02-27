@@ -9,13 +9,21 @@ interface ChatLayoutProps {
 export function ChatLayout({ children }: ChatLayoutProps) {
   return (
     <ChatProvider>
-      <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
+      <div style={{
+         display: "flex",
+         flex: 1,
+         width: "100%",
+         overflow: "hidden",
+         backgroundColor: "var(--bg-light)" }}>
+        
         <Sidebar />
 
-        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-          <div style={{ flex: 1, position: "relative" }}>
+        <div style={{ 
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          overflow: "hidden" }}>
             {children}
-          </div>
         </div>
       </div>
     </ChatProvider>
