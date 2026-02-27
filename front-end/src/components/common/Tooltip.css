@@ -1,0 +1,52 @@
+/* Wrapper around the element that shows tooltip */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip box */
+.tooltip-content {
+  position: absolute;
+  background-color: var(--bg-dark);
+  color: var(--text);
+  padding: var(--spacing-xs) var(--spacing-s);
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+/* Show on hover */
+.tooltip-wrapper:hover .tooltip-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Positions */
+.tooltip-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+}
+
+.tooltip-left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-5px);
+}
+
+.tooltip-right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(5px);
+}

@@ -1,0 +1,67 @@
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialog {
+  background-color: var(--bg-light);
+  color: var(--text);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-l);
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.dialog-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.dialog-message {
+  font-size: 1rem;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-s);
+}
+
+.dialog-cancel {
+  background-color: var(--bg-dark);
+  color: var(--text-muted);
+  padding: var(--spacing-s) var(--spacing-m);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.dialog-confirm {
+  background-color: var(--accent);
+  color: var(--text);
+  padding: var(--spacing-s) var(--spacing-m);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-confirm:disabled,
+.dialog-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
